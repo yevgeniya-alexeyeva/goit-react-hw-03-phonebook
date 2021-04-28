@@ -16,10 +16,21 @@ class App extends Component {
     filter: "",
   };
 
+  componentDidMount() {
+    const savedContacts = JSON.parse(localStorage.getItem("contacts"));
+    savedContacts && this.setState({ contacts: savedContacts });
+  }
+
+  componentDidUpdate(prevState) {
+    const { contacts } = this.state;
+    prevState.contacts !== contacts &&
+      localStorage.setItem("contacts", JSON.stringify(contacts));
+  }
+
   saveNewContact = (e, name, number) => {
     e.preventDefault();
-
-    this.state.contacts.some((item) => item.name === name)
+    const { contacts } = this.state;
+    contacts.some((item) => item.name === name)
       ? alert(`${name} is already in contacts`)
       : this.setState((prevState) => {
           return {
@@ -33,6 +44,7 @@ class App extends Component {
             ],
           };
         });
+
     e.currentTarget.reset();
   };
 
