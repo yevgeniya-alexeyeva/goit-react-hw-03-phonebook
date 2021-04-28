@@ -1,0 +1,7 @@
+.itemList {
+  width: 400px;
+  padding: 0;
+  margin: 10px auto;
+  list-style: none;
+  text-align: right;
+}

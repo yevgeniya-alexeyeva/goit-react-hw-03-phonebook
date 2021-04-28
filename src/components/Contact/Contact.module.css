@@ -1,0 +1,22 @@
+.button {
+  margin-left: 10px;
+  padding: 7px;
+
+  font-size: 16px;
+  color: white;
+  background-color: #fc4445;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(0.9);
+}
+.contactItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+}

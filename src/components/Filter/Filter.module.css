@@ -1,0 +1,10 @@
+.filterWrapper {
+  margin: 10px auto;
+  width: 400px;
+  display: grid;
+}
+.filterLabel {
+  margin-bottom: 5px;
+  color: rgb(88, 88, 88);
+  font-size: 16px;
+}
